@@ -1,0 +1,10 @@
+@mixin theme($name, $color) {
+    .#{$name}{
+        min-height: 100vh;
+        background-color: lighten($color, 70%);
+        
+    }
+}
+
+@include theme(green, green);
+@include theme(blue,#0000CD);
