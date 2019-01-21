@@ -33,7 +33,7 @@ export default class Index extends React.Component{
                     </div>
                 </div>
                 <div id="part1">
-                    <Productor name ="GAEC Le Chenêt" URL={'../../assets/imgs/background.jpg'}/>
+                    <Productor name ="GAEC Le Chenêt" url={require('../../assets/imgs/image1.png') } />
                 </div>
             </div>
         )
