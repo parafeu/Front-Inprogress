@@ -14,8 +14,8 @@ export default class Index extends React.Component{
         document.addEventListener('scroll', () => {
             if(window.scrollY >= (part1.scrollHeight - 64)){
                 this.setState({ navTransparent: false });
-            }else{
-                this.setState({ navTransparent: true });
+            }else {
+                this.setState({navTransparent: true});
             }
         })
     };
@@ -27,7 +27,7 @@ export default class Index extends React.Component{
                 <div id="header">
                 </div>
                 <div id="part1">
-                    <Productor/>
+                    <Productor name ="GAEC Le Chenêt" URL={"./src/Pages/Index/photo/image1.jpg"}/>
                 </div>
             </div>
         )
