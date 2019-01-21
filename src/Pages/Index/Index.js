@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from '../../Components/NavBar';
 import Productor from '../../Components/Productor';
+import Icon from '@material-ui/core/Icon';
 import './styles.scss';
 
 export default class Index extends React.Component{
@@ -25,6 +26,11 @@ export default class Index extends React.Component{
             <div className="index-container">
                 <Navbar transparent={this.state.navTransparent}/>
                 <div id="header">
+                    <div className="title-container">
+                        <img src={require('../../assets/imgs/logo.png')} alt="logo"/>
+                        <div></div>
+                        <h1>Un restaurant éthique près de chez vous !</h1>
+                    </div>
                 </div>
                 <div id="part1">
                     <Productor/>
