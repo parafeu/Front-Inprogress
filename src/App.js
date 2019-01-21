@@ -22,7 +22,10 @@ class App extends Component {
                     dark: "#99aa00",
                     contrastText: "#000000"
                 }
-            }
+            },
+            typography: {
+                useNextVariants: true,
+            },
         }),
         blue: createMuiTheme({
             palette: {
@@ -38,7 +41,10 @@ class App extends Component {
                     dark: "#0093c4",
                     contrastText: "#000000"
                 }
-            }
+            },
+            typography: {
+                useNextVariants: true,
+            },
         })
     };
 
