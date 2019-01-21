@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import {MuiThemeProvider, createMuiTheme} from '@material-ui/core/styles';
-import Productor from 'Components/Productor';
+
+import Index from './Pages/Index/Index';
+
 import "typeface-roboto";
 
 class App extends Component {
@@ -47,7 +49,7 @@ class App extends Component {
     render() {
         return (
             <MuiThemeProvider theme={this.themes[this.state.themeColor]}>
-                <Productor/>
+                <Index/>
             </MuiThemeProvider>
         );
     }

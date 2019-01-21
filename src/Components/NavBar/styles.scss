@@ -1,0 +1,14 @@
+.nav-container{
+  flex-grow: 1;
+}
+
+.nav-container > *{
+  transition: all 0.5s ease-in-out;
+}
+
+.nav-container > .transparent{
+  background-color: transparent;
+  border-bottom: none;
+  box-shadow: none;
+  color: #fff;
+}

@@ -1,0 +1,14 @@
+.index-container{
+  flex-grow: 1;
+}
+
+.index-container > #header{
+  min-height: 100vh;
+  background-image: url('background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.index-container > #part1{
+  min-height: 100vh;
+}
