@@ -13,7 +13,12 @@ export default class Navbar extends React.Component{
                 <AppBar position="fixed" color="primary" className={this.props.transparent ? "transparent" : ""}>
                     <Toolbar >
                         <img id="logo" alt="Logo" src={require('../../assets/imgs/logo.png')}/>
-                        <Button color="inherit">Login</Button>
+                        <div className="right">
+                            <Button>Accueil</Button>
+                            <Button>Le restaurant</Button>
+                            <Button>Menu</Button>
+                            <Button>Nos producteurs</Button>
+                        </div>
                     </Toolbar>
                 </AppBar>
             </div>

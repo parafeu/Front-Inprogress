@@ -54,9 +54,17 @@
       font-weight: 300;
     }
   }
-
+  > .title-icon{
+    position: absolute;
+    bottom: 1vw;
+    opacity: 0;
+    > *{
+      color: #fff;
+      font-size: 3vw;
+    }
+  }
 }
 
-.index-container > #part1{
+.index-container > #restaurant{
   min-height: 100vh;
 }
