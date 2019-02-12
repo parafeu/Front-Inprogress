@@ -13,11 +13,25 @@
     background-color: transparent;
     border-bottom: none;
     box-shadow: none;
-    color: #fff;
     #logo{
       filter: invert(1);
       margin: 1em;
       width: 10em;
+    }
+    a, button{
+      color: white;
+      text-decoration: none;
+      font-size: 1em;
+    }
+  }
+  .right{
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .right{
+    a, button{
+      font-weight: 400;
     }
   }
 }

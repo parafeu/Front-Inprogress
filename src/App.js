@@ -5,6 +5,8 @@ import Index from './Pages/Index/Index';
 
 import "typeface-roboto";
 
+import "./styles.scss";
+
 class App extends Component {
 
     themes = {
@@ -55,6 +57,7 @@ class App extends Component {
     render() {
         return (
             <MuiThemeProvider theme={this.themes[this.state.themeColor]}>
+                <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
                 <Index/>
             </MuiThemeProvider>
         );
