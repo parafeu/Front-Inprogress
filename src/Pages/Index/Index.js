@@ -53,7 +53,12 @@ export default class Index extends React.Component{
                     </a>
                 </div>
                 <div id="restaurant">
-                    <Productor/>
+                    <Productor name="GAEC Le Chenêt" 
+                      src={require('../../assets/imgs/image1.png')} 
+                      info="https://www.bienvenue-a-la-ferme.com/auvergnerhonealpes/haute-savoie/les-ollieres/ferme/la-ferme-du-chenet/135026"
+                      descriptif="Vente de viandes produites à la ferme (boeuf, veau de lait, porc), fabrication de charcuterie,
+                      vente de produits du terroir.  " />
+                   
                 </div>
             </div>
         )

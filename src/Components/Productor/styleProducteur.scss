@@ -1,11 +1,14 @@
 .product-container{
-  height: 400px;
+  //height: 400px;
+  max-width: 400px ;
+  margin-Left: 'auto';
   .imageProd{
     height: 300px;
-    width:200px;
-    paddingTop: '56.25%';
+    //height: 0px ;
+    width:400px;
+    padding-Top: '56.25%';
   }
   p{
-    width:200px;
+    width:400px;
   }
 }
