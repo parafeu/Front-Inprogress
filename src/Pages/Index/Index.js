@@ -87,6 +87,22 @@ export default class Index extends React.Component{
                      descriptif="produits de la ferme : Viande de boeuf, veau de lait et porc en caissettes ou au détail mais aussi charcuterie : saucisses, jambons, terrines, ..."
                     />
                 </div>
+                <div id="gallery">
+                    <Gallery data={{
+                        photo: [
+                            {
+                                id: 1,
+                                img: '../../assets/imgs/gallery1.png',
+                                title:"Assiette1"
+                            },
+                            {
+                                id: 2,
+                                name: '../../assets/imgs/gallery2.png',
+                                type: "Assiette2"
+                            }
+                        ]
+                    }}/>
+                </div>
             </div>
         )
     }
