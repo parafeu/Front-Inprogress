@@ -10,11 +10,12 @@ import Button from '@material-ui/core/Button';
 
 import './styleProducteur.scss';
 
-export default class Productor extends React.Component{
+export default class Productor extends React.Component {
 
 
-    render(){
-        return(
+    render() {
+        
+        return (
             <div >
 
                 <Card className="product-container">

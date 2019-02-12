@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from '../../Components/NavBar';
 import Productor from '../../Components/Productor';
+import Menu from '../../Components/Menu';
 import Icon from '@material-ui/core/Icon';
 import './styles.scss';
 import anime from 'animejs';
@@ -53,12 +54,34 @@ export default class Index extends React.Component{
                     </a>
                 </div>
                 <div id="restaurant">
-                    <Productor name="GAEC Le Chenêt" 
-                      src={require('../../assets/imgs/image1.png')} 
-                      info="https://www.bienvenue-a-la-ferme.com/auvergnerhonealpes/haute-savoie/les-ollieres/ferme/la-ferme-du-chenet/135026"
-                      descriptif="Vente de viandes produites à la ferme (boeuf, veau de lait, porc), fabrication de charcuterie,
-                      vente de produits du terroir.  " />
-                   
+                    <h2>Le restaurant</h2>
+                </div>
+                <div id="menu">
+                    <h2>Menu</h2>
+                    <Menu data={{
+                        name: "Premier menu",
+                        price: 35,
+                        dishes: [
+                            {
+                                id: 1,
+                                name: "Plat 1",
+                                type: "entree"
+                            },
+                            {
+                                id: 2,
+                                name: "Plat 2",
+                                type: "plat"
+                            },
+                            {
+                                id: 3,
+                                name: "Plat 3",
+                                type: "dessert"
+                            }
+                        ]
+                    }}/>
+                </div>
+                <div id="productors">
+                    <Productor/>
                 </div>
             </div>
         )

@@ -85,11 +85,34 @@
   }
 }
 
-.index-container > #restaurant{
-  min-height: 100vh;
-  padding-left: 30vw;
-  padding-right: 30vw;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background-color: rgba(0, 0, 0, 0.08);
+.index-container{
+  #productors{
+    min-height: 100vh;
+    padding-left: 30vw;
+    padding-right: 30vw;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.08);
+  }
+
+  #menu{
+    min-height: 100vh;
+    padding-left: 30vw;
+    padding-right: 30vw;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.08);
+  }
+
+  #restaurant{
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.08);
+    padding: 20px;
+  }
+}
+
+h2{
+  text-align: center;
+  font-size: 7em;
+  font-family: 'Freestyle Script', Courier, monospace
 }
