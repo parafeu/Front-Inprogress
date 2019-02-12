@@ -8,11 +8,12 @@ import Typography from '@material-ui/core/Typography';
 
 import './styleProducteur.scss';
 
-export default class Productor extends React.Component{
+export default class Productor extends React.Component {
 
 
-    render(){
-        return(
+    render() {
+        
+        return (
             <div >
 
                 <Card className="product-container">
@@ -26,7 +27,7 @@ export default class Productor extends React.Component{
                         subheader="September 14, 2016"
                     />
                     <CardMedia className="imageProd"
-                        image={this.props.url}
+                        image={this.props.src}
                         title="saucissons"
                     />
                     <CardContent>
@@ -35,6 +36,7 @@ export default class Productor extends React.Component{
                             vente de produits du terroir.
                         </Typography>
                     </CardContent>
+
                 </Card>
             </div>
         )

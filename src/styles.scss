@@ -4,10 +4,10 @@ html{
 
 @font-face {
   font-family: 'Freestyle Script';
-  src: url('./Fonts/FreestyleScript-Regular.woff2') format('woff2'),
-      url('./Fonts/FreestyleScript-Regular.woff') format('woff'),
-      url('./Fonts/FreestyleScript-Regular.ttf') format('truetype'),
-      url('./Fonts/FreestyleScript-Regular.svg#FreestyleScript-Regular') format('svg');
+  src: url('./assets/fonts/FreestyleScript-Regular/FreestyleScript-Regular.woff2') format('woff2'),
+      url('./assets/fonts/FreestyleScript-Regular/FreestyleScript-Regular.woff') format('woff'),
+      url('./assets/fonts/FreestyleScript-Regular/FreestyleScript-Regular.ttf') format('truetype'),
+      url('./assets/fonts/FreestyleScript-Regular/FreestyleScript-Regular.eot') format('embedded-opentype');
   font-weight: normal;
   font-style: normal;
 }
