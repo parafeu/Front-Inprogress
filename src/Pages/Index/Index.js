@@ -3,6 +3,7 @@ import Navbar from '../../Components/NavBar';
 import Productor from '../../Components/Productor';
 import Icon from '@material-ui/core/Icon';
 import './styles.scss';
+import anime from 'animejs';
 
 export default class Index extends React.Component{
 
