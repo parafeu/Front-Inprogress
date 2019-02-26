@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {MuiThemeProvider, createMuiTheme} from '@material-ui/core/styles';
 
-import Index from './Pages/Index/Index';
+import Home from './Pages/Home/Home';
 
 import "typeface-roboto";
 
@@ -58,7 +58,7 @@ class App extends Component {
         return (
             <MuiThemeProvider theme={this.themes[this.state.themeColor]}>
                 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
-                <Index/>
+                <Home/>
             </MuiThemeProvider>
         );
     }

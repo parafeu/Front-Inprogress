@@ -65,12 +65,21 @@ export default class Menu extends React.Component{
                 <div className="menu-content">
                     <div className="menu-category">
                         <h4>{entree}<span/></h4>
+                        {
+                            this.getEntrees()
+                        }
                     </div>
                     <div className="menu-category">
                         <h4>{plat}<span/></h4>
+                        {
+                            this.getPlats()
+                        }
                     </div>
                     <div className="menu-category">
                         <h4>{dessert}<span/></h4>
+                        {
+                            this.getDesserts()
+                        }
                     </div>
                 </div>
             </Card>

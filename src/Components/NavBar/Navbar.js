@@ -41,10 +41,11 @@ export default class Navbar extends React.Component {
                         {
                             this.state.width > 900 && (
                                 <div className="right">
-                                    <Button href="/#">Accueil</Button>
-                                    <Button>Menu</Button>
-                                    <Button>Nos producteurs</Button>
-                                    <Button>Galerie</Button>
+                                    <Button href="/">Accueil</Button>
+                                    <Button href="/#restaurant">Le restaurant</Button>
+                                    <Button href="/#menu">Menu</Button>
+                                    <Button href="/#productors">Nos producteurs</Button>
+                                    <Button href="/#gallery">Galerie</Button>
                                 </div>
                             )
 
