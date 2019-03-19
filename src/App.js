@@ -27,7 +27,7 @@ class App extends Component {
             },
             typography: {
                 useNextVariants: true,
-            },
+            }
         }),
         blue: createMuiTheme({
             palette: {

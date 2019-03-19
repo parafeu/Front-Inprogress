@@ -8,6 +8,8 @@ import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
+import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
+import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
 
 
 import './styles.scss';
@@ -33,9 +35,14 @@ export default class Navbar extends React.Component {
     };
 
     render() {
+
+        let navbarClasses = "navbar";
+        if(!this.props.trigger){
+            navbarClasses += " transparent";
+        }
         return (
             <div className="nav-container">
-                <AppBar position="fixed" color="primary" className={this.props.transparent ? "transparent" : ""}>
+                <AppBar position="fixed" className={ navbarClasses }>
                     <Toolbar >
                         <img id="logo" alt="Logo" src={require('../../assets/imgs/logo.png')} />
                         {
@@ -85,7 +92,7 @@ export default class Navbar extends React.Component {
                                     </List>
                                 </Drawer>
                             )
-                        }
+                        }   
                     </Toolbar>
                 </AppBar>
             </div>
