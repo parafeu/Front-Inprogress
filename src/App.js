@@ -1,67 +1,42 @@
 import React, {Component} from 'react';
 import {MuiThemeProvider, createMuiTheme} from '@material-ui/core/styles';
+import palettes from './Constants/palettes';
+import { connect } from 'react-redux';
+import { Router, Link } from "@reach/router"
 
 import Home from './Pages/Home/Home';
+import Admin from './Pages/Admin/Admin';
 
 import "typeface-roboto";
 
 import "./styles.scss";
+import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 
 class App extends Component {
-
-    themes = {
-        green: createMuiTheme({
-            palette: {
-                primary: {
-                    light: "#80e27e",
-                    main: "#4caf50",
-                    dark: "#087f23",
-                    contrastText: "#000000"
-                },
-                secondary: {
-                    light: "#cddc39",
-                    main: "#cddc39",
-                    dark: "#99aa00",
-                    contrastText: "#000000"
-                }
-            },
-            typography: {
-                useNextVariants: true,
-            }
-        }),
-        blue: createMuiTheme({
-            palette: {
-                primary: {
-                    light: "#67daff",
-                    main: "#03a9f4",
-                    dark: "#007ac1",
-                    contrastText: "#000000"
-                },
-                secondary: {
-                    light: "#8bf6ff",
-                    main:"#4fc3f7",
-                    dark: "#0093c4",
-                    contrastText: "#000000"
-                }
-            },
-            typography: {
-                useNextVariants: true,
-            },
-        })
-    };
 
     state = {
         themeColor: "green"
     };
 
     render() {
+        let RHome = () => <Home/>;
+        let RAdmin = () => <Admin/>;
         return (
-            <MuiThemeProvider theme={this.themes[this.state.themeColor]}>
+            <MuiThemeProvider theme={createMuiTheme(palettes[this.props.theme])}>
                 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
-                <Home/>
+                <Router>
+                    <RHome path="/"/>
+                    <RAdmin path="admin"/>
+                </Router>
             </MuiThemeProvider>
         );
     }
 }
 
-export default App;
+const mapStateToProps = (state) => {
+    return {
+        theme: state.theme
+    };
+}
+
+export default connect(mapStateToProps)(App);

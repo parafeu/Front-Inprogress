@@ -1,0 +1,17 @@
+#adminToolbar{
+    height: 75px;
+    #logo{
+        width: 8em;
+        margin: 10px 2em 10px 0px;
+    }
+    #logo.invert{
+        filter: invert(1);  
+    }
+    .adminButton{
+        padding: 6px 16px !important;
+    }
+}
+
+.grow{
+    flex-grow: 1;
+}
