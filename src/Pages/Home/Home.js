@@ -67,7 +67,7 @@ export default class Home extends React.Component{
                                 {
                                     id: 1,
                                     name: "Plat 1",
-                                    type: "entree"
+                                    type: "entree",
                                 },
                                 {
                                     id: 2,
@@ -96,14 +96,40 @@ export default class Home extends React.Component{
                             photo: [
                                 {
                                     id: 1,
-                                    img: '../../assets/imgs/gallery1.png',
-                                    title:"Assiette1"
+                                    img: require('../../assets/imgs/gallery1.png'),
+                                    title:"Assiette1",
+                                    cols: 1
                                 },
                                 {
                                     id: 2,
-                                    name: '../../assets/imgs/gallery2.png',
-                                    type: "Assiette2"
-                                }
+                                    img: require('../../assets/imgs/gallery2.png'),
+                                    title: "Assiette2",
+                                    cols: 2
+                                },
+                                {
+                                    id: 3,
+                                    img: require('../../assets/imgs/gallery3.png'),
+                                    title: "Assiette3",
+                                    cols: 3
+                                },
+                                {
+                                    id: 4,
+                                    img: require('../../assets/imgs/gallery4.png'),
+                                    title: "Assiette4",
+                                    cols: 1
+                                },
+                                {
+                                    id: 5,
+                                    img: require('../../assets/imgs/gallery5.png'),
+                                    title: "Assiette5",
+                                    cols: 2
+                                },
+                                {
+                                    id: 6,
+                                    img: require('../../assets/imgs/gallery6.png'),
+                                    title: "Assiette6",
+                                    cols: 3
+                                },
                             ]
                         }}/>
                     </div>
