@@ -10,7 +10,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
 import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
-
+import { connect } from 'react-redux';
 
 import './styles.scss';
 
@@ -43,7 +43,7 @@ export default class Navbar extends React.Component {
         return (
             <div className="nav-container">
                 <AppBar position="fixed" className={ navbarClasses }>
-                    <Toolbar >
+                    <Toolbar>
                         <img id="logo" alt="Logo" src={require('../../assets/imgs/logo.png')} />
                         {
                             this.state.width > 900 && (

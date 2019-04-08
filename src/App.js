@@ -2,7 +2,8 @@ import React, {Component} from 'react';
 import {MuiThemeProvider, createMuiTheme} from '@material-ui/core/styles';
 import palettes from './Constants/palettes';
 import { connect } from 'react-redux';
-import { Router, Link } from "@reach/router"
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 import Home from './Pages/Home/Home';
 import Admin from './Pages/Admin/Admin';
@@ -13,29 +14,30 @@ import "./styles.scss";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 
 class App extends Component {
-
-    state = {
-        themeColor: "green"
-    };
-
     render() {
-        let RHome = () => <Home/>;
-        let RAdmin = () => <Admin/>;
-        return (
-            <MuiThemeProvider theme={createMuiTheme(palettes[this.props.theme])}>
-                <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
-                <Router>
-                    <RHome path="/"/>
-                    <RAdmin path="admin"/>
-                </Router>
-            </MuiThemeProvider>
-        );
+        if(!this.props.isFetchingConfig){
+            return (
+                <MuiThemeProvider theme={createMuiTheme(palettes[this.props.couleur])}>
+                    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+                    <Router>
+                        <Route path="/" exact component={Home}/>
+                        <Route path="/admin" component={Admin}/>
+                    </Router>
+                </MuiThemeProvider>
+            );
+        }else{
+            return <div id="waiting-screen">
+                <img src={require("./assets/imgs/logo.png")}/>
+                <CircularProgress/>
+            </div>;    
+        }
     }
 }
 
 const mapStateToProps = (state) => {
     return {
-        theme: state.theme
+        isFetchingConfig: state.isFetchingConfig,
+        couleur: state.config.couleur
     };
 }
 

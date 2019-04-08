@@ -80,6 +80,14 @@ body *{
           font-size: 3.5vw;
         }  
       }
+
+      > h2{
+        font-family: "Freestyle Script";
+        font-weight: 900;
+        text-transform: capitalize;
+        font-size: 5em;
+        margin: 0px;
+      }
     }
     > .title-icon{
       position: absolute;
@@ -106,7 +114,6 @@ body *{
     padding-right: 30vw;
     padding-top: 20px;
     padding-bottom: 50px;
-    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../../assets/imgs/pattern.jpg");
   }
 
   #restaurant{

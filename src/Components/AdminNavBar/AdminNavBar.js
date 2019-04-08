@@ -1,6 +1,7 @@
 import React from 'react'
 import { AppBar, Toolbar, Typography, Button } from '@material-ui/core';
 import { withTheme } from '@material-ui/core/styles';
+import { Link } from "react-router-dom";
 
 import "./styles.scss";
 
@@ -8,9 +9,9 @@ export default withTheme()(function AdminNavBar(props) {
     return (
         <AppBar position="static">
             <Toolbar id="adminToolbar">
-                <img src={require("../../assets/imgs/logo.png")} id="logo" alt="Logo" className={
+               <Link to="/"><img src={require("../../assets/imgs/logo.png")} id="logo" alt="Logo" className={
                     props.theme.palette.primary.contrastText === "#fff" ? "invert" : ""
-                }/>
+                }/></Link>
                 <Typography className="grow" variant="h6" color="inherit">{"Bonjour " + props.userName + " !"}</Typography>
                 <Button
                     color="sec"

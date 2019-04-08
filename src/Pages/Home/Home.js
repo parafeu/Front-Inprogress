@@ -3,11 +3,14 @@ import Navbar from '../../Components/NavBar';
 import Productor from '../../Components/Productor';
 import Gallery from '../../Components/Gallery';
 import Menu from '../../Components/Menu';
+import { withTheme } from '@material-ui/core/styles';
+import { connect } from 'react-redux';
 import Icon from '@material-ui/core/Icon';
+import tinycolor from 'tinycolor2';
 import './styles.scss';
 import anime from 'animejs';
 
-export default class Home extends React.Component{
+class Home extends React.Component{
 
     state = {
         triggerBackground: false
@@ -40,6 +43,14 @@ export default class Home extends React.Component{
         })
     };
 
+    getMenuBackground = () => {
+        let primary = this.props.theme.palette.primary.main;
+        let color = tinycolor(primary);
+        color.setAlpha(.15);
+        let pattern = require("../../assets/imgs/pattern.jpg");
+        return "linear-gradient(" + color.toRgbString() + ", " + color.toRgbString() + "), url("+pattern+")";
+    }
+
     render(){
         return(
             <div className="index-container">
@@ -48,8 +59,9 @@ export default class Home extends React.Component{
                     <div id="header">
                         <div className="title-container">
                             <img src={require('../../assets/imgs/logo.png')} alt="logo"/>
+                            <h2>{this.props.config.nom}</h2>
                             <div></div>
-                            <h1>Un restaurant éthique près de chez vous !</h1>
+                            <h1>{this.props.config.contenu.accroche}</h1>
                         </div>
                         <a href="#restaurant" className="title-icon">
                             <Icon>keyboard_arrow_down</Icon>
@@ -58,7 +70,7 @@ export default class Home extends React.Component{
                     <div id="restaurant">
                         <h2>Le restaurant</h2>
                     </div>
-                    <div id="menu">
+                    <div id="menu" style={{ backgroundImage: this.getMenuBackground() }}>
                         <h2>Menu</h2>
                         <Menu data={{
                             name: "Premier menu",
@@ -102,7 +114,7 @@ export default class Home extends React.Component{
                                 {
                                     id: 2,
                                     name: '../../assets/imgs/gallery2.png',
-                                    type: "Assiette2"
+                                    title: "Assiette2"
                                 }
                             ]
                         }}/>
@@ -112,3 +124,11 @@ export default class Home extends React.Component{
         )
     }
 }
+
+const mapStateWithProps = (state) => {
+    return {
+        config: state.config
+    }
+}
+
+export default connect(mapStateWithProps)(withTheme()(Home));

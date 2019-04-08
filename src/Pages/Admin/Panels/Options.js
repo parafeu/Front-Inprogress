@@ -3,7 +3,7 @@ import { Typography, Icon, TextField } from '@material-ui/core'
 import Fab from '@material-ui/core/Fab';
 import palettes from "../../../Constants/palettes";
 import { connect } from 'react-redux'
-import { actionCreators } from '../../../store/actions';
+import * as actions from '../../../store/actions';
 import { EditorState } from 'draft-js';
 import { Editor } from 'react-draft-wysiwyg';
 import places from 'places.js';
@@ -24,10 +24,10 @@ class Options extends React.Component{
             colors.push(
                 <Fab key={"palette_" + color} style={{ backgroundColor: palettes[color].palette.primary["500"] }} onClick={() => this.changePalette(color)}>
                 {
-                    this.props.theme === color && <Icon style={{ color: "white" }}>check</Icon>
+                    this.props.config.couleur === color && <Icon style={{ color: "white" }}>check</Icon>
                 }
                 {
-                    this.props.theme !== color && <div></div>
+                    this.props.config.couleur !== color && <div></div>
                 }
                 </Fab>
             )
@@ -37,7 +37,7 @@ class Options extends React.Component{
 
     changePalette = (color) => {
         if(this.props.theme !== color){
-            this.props.dispatch(actionCreators.setTheme(color));
+            this.props.dispatch(actions.setConfig("couleur", color));
         }
     }
 
@@ -96,7 +96,7 @@ class Options extends React.Component{
 
 const mapStateToProps = (state) => {
     return {
-        theme: state.theme
+        config: state.config
     };
 }
 

@@ -2,6 +2,19 @@ html{
   scroll-behavior: smooth;
 }
 
+#waiting-screen{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  img{
+    max-width: 300px;
+    margin-bottom: 2em;
+  }
+}
+
 @font-face {
   font-family: 'Freestyle Script';
   src: url('./assets/fonts/FreestyleScript-Regular/FreestyleScript-Regular.woff2') format('woff2'),
