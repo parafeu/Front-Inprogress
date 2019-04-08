@@ -84,11 +84,51 @@ export default class Home extends React.Component{
                     </div>
                     <div id="productors">
                         <h2>Nos producteurs</h2>
+                        {/* <Productor data={{ 
+                            ferme :[
+                                {
+                                    name: "GAEC Le Chenêt",
+                                    src: require('../../assets/imgs/image1.png'),
+                                    info: "https://www.bienvenue-a-la-ferme.com/auvergnerhonealpes/haute-/les-ollieres/ferme/la-ferme-du-chenet/135026",
+                                    descriptif:"produits de la ferme : Viande de boeuf, veau de lait et porc en caissettes ou au détail mais aussi charcuterie : saucisses, jambons, terrines, ..."
+                                },
+                                {
+                                    name: "Les jardins de Banset - Elsa Pittard-Mathieu",
+                                    src: require('../../assets/imgs/ferme2.png'),
+                                    info : "https://www.producteurs-savoie-mont-blanc.com/les-jardins-de-banset-fruits-a-la-ferme.html?origine_affinage=true&mid=1&action=result&origine_affinage=true",
+                                    descriptif:"Petite exploitation agricole en production et transformation de fruits rouges et maraîchage AB certifié. Cueillette sauvage également. Entreprise à taille humaine, dans le respect des plantes et des hommes."
+                                },
+                                {
+                                    name: "Les jardins de Saint Julien - Louis-Abel Alary",
+                                    src: require('../../assets/imgs/ferme3.png'),
+                                    info: "https://www.producteurs-savoie-mont-blanc.com/les-jardins-de-st-julien-legumes-a-la-ferme.html?origine_affinage=true&mid=1&action=result&origine_affinage=true",
+                                    descriptif: "Les vignes, les céréales et les patûres qui occupaient autrefois le terrain ont été progressivement remplacées par la friche. Comment retrouver le lien entre l'homme et la terre? L'agriculture biologique et la permaculture était une évidence.Progressivement, le jardin prend forme en s'appuyant sur les particularités des milieux et du relief et en cherchant à les valoriser. Les légumes sont cultivés en Agricluture Biologique, avec une certification du bureau Alpes Contrôles."
+                                },
+                                {
+                                    name: "Bio à la balme - Vanet Guy",
+                                    src: require('../../assets/imgs/ferme4.png'),
+                                    info:"https://www.producteurs-savoie-mont-blanc.com/bio-la-balme-legumes-a-la-ferme.html",
+                                    descriptif: "Nous produisons des légumes, oeufs et des poulets entre fleuve et montagne, sur la commune de la Balme. Les bonnes terres d'alluvion du Rhône nous permettent de vous proposer au fil des saisons une belle gamme cultivée en agriculture biologique."
+                                },
+                                {
+                                    name: "La ferme de Fournache - Noémie Maurette",
+                                    src: require('../../assets/imgs/ferme5.png'),
+                                    info: "https://www.producteurs-savoie-mont-blanc.com/ferme-de-la-fournache-legumes-a-la-ferme.html#media",
+                                    descriptif:"Depuis 2014, la Ferme de la Fournache produit des légumes diversifiés, des petits fruits et des plantes aromatiques en agriculture biologique sur la commune de St-Jean-de-Maurienne."
+                                }
+                            ]        
+
+                        }}/>
+                    */}
+
+                        
                         <Productor name="GAEC Le Chenêt"
                             src={require('../../assets/imgs/image1.png')}
                             info="https://www.bienvenue-a-la-ferme.com/auvergnerhonealpes/haute-/les-ollieres/ferme/la-ferme-du-chenet/135026"
                             descriptif="produits de la ferme : Viande de boeuf, veau de lait et porc en caissettes ou au détail mais aussi charcuterie : saucisses, jambons, terrines, ..."
                         />
+                        
+
                     </div>
                     <div id="gallery">
                         <h2>Galerie</h2>
@@ -104,13 +144,13 @@ export default class Home extends React.Component{
                                     id: 2,
                                     img: require('../../assets/imgs/gallery2.png'),
                                     title: "Assiette2",
-                                    cols: 2
+                                    cols: 1
                                 },
                                 {
                                     id: 3,
                                     img: require('../../assets/imgs/gallery3.png'),
                                     title: "Assiette3",
-                                    cols: 3
+                                    cols: 1
                                 },
                                 {
                                     id: 4,
