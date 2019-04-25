@@ -1,4 +1,5 @@
 import axios from 'axios';
+import config from '../config.json';
 
 export const REQUIRE_CONFIG = "REQUIRE_CONFIG";
 export const RECEIVE_CONFIG = "RECEIVE_CONFIG";
@@ -28,7 +29,7 @@ export function setConfig(key, value){
 export function getConfig(){
     return function(dispatch){
         dispatch(requestConfig());
-        return axios.get("http://172.28.59.28:3000/config")
+        return axios.get(config.fpApi + "/config")
             .then(response => {
                 if(response.status === 200){
                     dispatch(receiveConfig(response.data.content));
