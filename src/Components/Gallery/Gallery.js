@@ -17,7 +17,7 @@ export default class Gallery extends React.Component{
     render(){
  
         const childElements = this.props.data.photo.map(tile=>(
-            <div className="root">
+            <div className="photo">
                 <GridListTile key={tile.id} cols={tile.cols || 1 } >
                    <img src={tile.img} alt={tile.title} />
                 </GridListTile>
@@ -27,7 +27,7 @@ export default class Gallery extends React.Component{
        return(
             
             <Masonry
-                className={''} 
+                className={'container'} 
                 elementType={'div'} 
                 options={masonryOptions} 
                 disableImagesLoaded={false} 
@@ -35,7 +35,7 @@ export default class Gallery extends React.Component{
                 imagesLoadedOptions={imagesLoadedOptions} 
             >
 
-               <GridList cellHeight={200} className="photo-container" cols={3}>
+               <GridList cellHeight={160} className="photo-container" cols={3}>
                     {childElements}
                </GridList>
 

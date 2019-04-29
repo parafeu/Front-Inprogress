@@ -1,15 +1,10 @@
-.root{
+.container{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    overflow: hidden;
-   // margin-left: auto;
-   // margin-right: auto;
-  
+    justify-content: center;
 }
 
 .photo-container{ 
     width: 500;
     height: 450;
-    padding-block-start: 10%;
 }

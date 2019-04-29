@@ -84,34 +84,44 @@ export default class Home extends React.Component{
                     </div>
                     <div id="productors">
                         <h2>Nos producteurs</h2>
-                        {/* <Productor data={{ 
-                            ferme :[
+                        <Productor data={{ 
+                            fermes :[
                                 {
-                                    name: "GAEC Le Chenêt",
-                                    src: require('../../assets/imgs/image1.png'),
-                                    info: "https://www.bienvenue-a-la-ferme.com/auvergnerhonealpes/haute-/les-ollieres/ferme/la-ferme-du-chenet/135026",
-                                    descriptif:"produits de la ferme : Viande de boeuf, veau de lait et porc en caissettes ou au détail mais aussi charcuterie : saucisses, jambons, terrines, ..."
+                                    id:1,
+                                    name: "La ferma d'hier",
+                                    name2:"EARL Axelrad Vuillemin",
+                                    src: require('../../assets/imgs/ferme1.png'),
+                                    info: "https://www.producteurs-savoie-mont-blanc.com/la-ferma-d-hier-specialites-autres-produits-a-la-ferme.html",
+                                    descriptif:"Les porcs vivent en plein air par groupe de 15 à 18 dans un enclos de 1 600 à 2 000 m²  avec un abris. Ils se nourrissent de racines, glands ou châtaignes selon la saison que nous complétons avec des céréales et de l'eau."
                                 },
                                 {
-                                    name: "Les jardins de Banset - Elsa Pittard-Mathieu",
+                                    id:2,
+                                    name: "Les jardins de Banset ",
+                                    name2:" Elsa Pittard-Mathieu",
                                     src: require('../../assets/imgs/ferme2.png'),
                                     info : "https://www.producteurs-savoie-mont-blanc.com/les-jardins-de-banset-fruits-a-la-ferme.html?origine_affinage=true&mid=1&action=result&origine_affinage=true",
                                     descriptif:"Petite exploitation agricole en production et transformation de fruits rouges et maraîchage AB certifié. Cueillette sauvage également. Entreprise à taille humaine, dans le respect des plantes et des hommes."
                                 },
                                 {
-                                    name: "Les jardins de Saint Julien - Louis-Abel Alary",
+                                    id:3,
+                                    name: "Les jardins de Saint Julien ",
+                                    name2:"Louis-Abel Alary",
                                     src: require('../../assets/imgs/ferme3.png'),
                                     info: "https://www.producteurs-savoie-mont-blanc.com/les-jardins-de-st-julien-legumes-a-la-ferme.html?origine_affinage=true&mid=1&action=result&origine_affinage=true",
                                     descriptif: "Les vignes, les céréales et les patûres qui occupaient autrefois le terrain ont été progressivement remplacées par la friche. Comment retrouver le lien entre l'homme et la terre? L'agriculture biologique et la permaculture était une évidence.Progressivement, le jardin prend forme en s'appuyant sur les particularités des milieux et du relief et en cherchant à les valoriser. Les légumes sont cultivés en Agricluture Biologique, avec une certification du bureau Alpes Contrôles."
                                 },
                                 {
-                                    name: "Bio à la balme - Vanet Guy",
+                                    id:4,
+                                    name: "Bio à la balme ",
+                                    name2:"Vanet Guy",
                                     src: require('../../assets/imgs/ferme4.png'),
                                     info:"https://www.producteurs-savoie-mont-blanc.com/bio-la-balme-legumes-a-la-ferme.html",
                                     descriptif: "Nous produisons des légumes, oeufs et des poulets entre fleuve et montagne, sur la commune de la Balme. Les bonnes terres d'alluvion du Rhône nous permettent de vous proposer au fil des saisons une belle gamme cultivée en agriculture biologique."
                                 },
                                 {
-                                    name: "La ferme de Fournache - Noémie Maurette",
+                                    id:5,
+                                    name: "La ferme de Fournache",
+                                    name2:"Noémie Maurette",
                                     src: require('../../assets/imgs/ferme5.png'),
                                     info: "https://www.producteurs-savoie-mont-blanc.com/ferme-de-la-fournache-legumes-a-la-ferme.html#media",
                                     descriptif:"Depuis 2014, la Ferme de la Fournache produit des légumes diversifiés, des petits fruits et des plantes aromatiques en agriculture biologique sur la commune de St-Jean-de-Maurienne."
@@ -119,14 +129,14 @@ export default class Home extends React.Component{
                             ]        
 
                         }}/>
-                    */}
+                    
 
                         
-                        <Productor name="GAEC Le Chenêt"
+                      {/*  <Productor name="GAEC Le Chenêt"
                             src={require('../../assets/imgs/image1.png')}
                             info="https://www.bienvenue-a-la-ferme.com/auvergnerhonealpes/haute-/les-ollieres/ferme/la-ferme-du-chenet/135026"
                             descriptif="produits de la ferme : Viande de boeuf, veau de lait et porc en caissettes ou au détail mais aussi charcuterie : saucisses, jambons, terrines, ..."
-                        />
+                    />*/}
                         
 
                     </div>
@@ -144,13 +154,13 @@ export default class Home extends React.Component{
                                     id: 2,
                                     img: require('../../assets/imgs/gallery2.png'),
                                     title: "Assiette2",
-                                    cols: 1
+                                    cols: 2
                                 },
                                 {
                                     id: 3,
                                     img: require('../../assets/imgs/gallery3.png'),
                                     title: "Assiette3",
-                                    cols: 1
+                                    cols: 3
                                 },
                                 {
                                     id: 4,
@@ -170,6 +180,24 @@ export default class Home extends React.Component{
                                     title: "Assiette6",
                                     cols: 3
                                 },
+                                {
+                                    id: 7,
+                                    img: require('../../assets/imgs/gallery7.png'),
+                                    title: "Assiette7",
+                                    cols: 1
+                                },
+                                {
+                                    id: 8,
+                                    img: require('../../assets/imgs/gallery8.png'),
+                                    title: "Assiette8",
+                                    cols: 2
+                                },
+                                {
+                                    id: 9,
+                                    img: require('../../assets/imgs/gallery9.png'),
+                                    title: "Assiette9",
+                                    cols: 3
+                                }
                             ]
                         }}/>
                     </div>

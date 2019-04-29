@@ -14,33 +14,28 @@ export default class Productor extends React.Component {
 
 
     render() {
-        
         return (
+       
             <div >
-
+                 {this.props.data.fermes.map ((ferme) =>
                 <Card className="product-container">
                     <CardHeader
-                        avatar={
-                            <Avatar>
-                                R
-                            </Avatar>
-                        }
-                        title={this.props.name}
-                        subheader="September 14, 2016"
+                        title={ferme.name}
+                        subheader={ferme.name2}
                     />
                     <CardMedia className="imageProd"
-                        image={this.props.src}
-                        title="saucissons"
+                        image={ferme.src}
+                        title="image_ferme"
                     />
                     <CardContent>
                         <Typography component="p">
-                            {this.props.descriptif}
+                            {ferme.descriptif}
                         </Typography>
                     </CardContent>
                     <CardActions>
                         {
-                            this.props.info && (
-                            <Button size="small" color="primary" target="_blank" href={this.props.info} >
+                            ferme.info && (
+                            <Button size="small" color="primary" target="_blank" href={ferme.info} >
                              Plus d'info
                             </Button>
                             )
@@ -48,7 +43,9 @@ export default class Productor extends React.Component {
                         
                     </CardActions>     
                 </Card>
+                 )}
             </div>
+           
         )
     }
 }
