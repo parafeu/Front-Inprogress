@@ -12,6 +12,7 @@ import "typeface-roboto";
 
 import "./styles.scss";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
+import 'react-toastify/dist/ReactToastify.css';
 
 class App extends Component {
     render() {
