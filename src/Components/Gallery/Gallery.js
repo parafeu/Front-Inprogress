@@ -3,7 +3,7 @@ import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import Masonry from 'react-masonry-component';
 
-import './styleGallery.scss';
+import './style.scss';
 
 
 
@@ -27,7 +27,7 @@ export default class Gallery extends React.Component{
        return(
             
             <Masonry
-                className={'container'} 
+                className={'gallery-container'}
                 elementType={'div'} 
                 options={masonryOptions} 
                 disableImagesLoaded={false} 
